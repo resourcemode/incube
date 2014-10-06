@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Incube8 - Bus App</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="vendor/twitter-bootstrap/css/bootstrap.css" media="screen" rel="stylesheet" />
+        <link href="public/css/main.css" media="screen" rel="stylesheet" />
+        
+        <script src="vendor/jquery/jquery.js"></script>
+        <script src="vendor/jqueryui/jquery-ui.js"></script>
+        <script src="vendor/twitter-bootstrap/js/bootstrap.js"></script>
+    </head>
+    <body>
+        <img src="public/img/bus.jpg" class="bus-bg" alt=""/>
+        <div class="row">
+            <div class="text-center"><img src="public/img/logo.png" alt=""/></div>
+        </div><br/>
+        <div class="row content-gray">
+            <div class="col-md-12 col-sm-12">
+                <form method="post" name="form1" id="form1">
+                <div class="text-center">
+                    <input id="search" name="search" type="text" class="col-md-12 col-sm-12" placeholder="your location, e.g bugis">
+                </div>
+                </form>
+                <div id="table" class="table-responsive">
+                    <table id="infoTable" class="table table-bordered table-hover">
+                        <tr class="active">
+                            <th class='text-center text-info'>Bus No</th>
+                            <th class='text-center text-info'>Bus Name</th>
+                            <th class='text-center text-info'>Next Bus Arriving</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div><br/>
+        
+        <script src="public/js/main.js"></script>
+        <script>
+            $(document).ready(function() {
+                searchAutoComplete(); 
+            });
+        </script>
+    </body>
+</html>

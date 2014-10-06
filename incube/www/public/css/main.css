@@ -1,0 +1,32 @@
+/*!
+ * main css
+ *
+ * Copyright resourcemode.com
+ *
+ */
+body {
+    margin: 40px;
+    background: #000;
+    color: #646464;
+    font-family: 'Raleway', sans-serif;
+}
+
+.bus-bg {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -100;
+    opacity: 0.7;
+}
+
+.content {
+    background: #953b39;
+}
+
+.content-gray { 
+  background-color: rgba(50, 50, 50, 0.80);
+  padding:10px;
+  color: white;
+  min-height: 600px;
+}
