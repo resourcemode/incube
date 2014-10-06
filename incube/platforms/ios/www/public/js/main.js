@@ -44,20 +44,13 @@ function calculate(distance, speed) {
 }
 
 function displayBuses(busNo, busName, busLocation, busDistance, busSpeed) {   
-    if (typeof busNo !== 'undefined') {
-        busTiming = calculate(busDistance, busSpeed);
-        if (busTiming !== null) {
-            timing = 'No Estimate Time Available';
-        } else {
-            timing = busTiming;
-        }
-        
+    if (typeof busNo !== 'undefined') {        
         var push = false;
         $("#search").on('input', function() {
             searchString = $("#search").val();
             if (searchString.toLowerCase() === busLocation.toLowerCase()) {
                 if (push === false) {
-                    populate();
+                    populate(busDistance, busSpeed);
                     push = true;
                 }
                 if ($("#search").keyup(function(e) {
@@ -78,7 +71,7 @@ function displayBuses(busNo, busName, busLocation, busDistance, busSpeed) {
                $("#infoTable").append(
                 "<tr><td class='text-center text-danger'>" + busNo + "</td>"  +  
                 "<td class='text-center text-danger'>" + busName + "</td>"   +
-                "<td class='text-center text-danger'>" + busTiming + "</td></tr>"
+                "<td class='text-center text-danger'>" + calculate(busDistance, busSpeed) + "</td></tr>"
             );
         }
     } 
